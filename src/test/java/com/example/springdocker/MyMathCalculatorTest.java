@@ -1,4 +1,5 @@
-import com.example.springdocker.MyMathCalculator;
+package com.example.springdocker;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
