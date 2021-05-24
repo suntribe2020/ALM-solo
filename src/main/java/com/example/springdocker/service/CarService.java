@@ -25,15 +25,14 @@ public class CarService {
         return carRepository.findAll();
     }
 
-    public void saveNewCar(Car car) {
-        carRepository.save(car);
+    public Car saveNewCar(Car car) {
+        return carRepository.save(car);
     }
 
     public List<String> getDrivableCars() {
-        // hämtar alla Cars som vi kan köra
         List<Car> drivableCars = carRepository.findCarByCanIDriveIt(true);
 
-        // returnerar endast Cars namnen i en lista
+        // returnerar Cars namnen i en lista
         return drivableCars.stream()
                 .map(Car::getName)
                 .collect(Collectors.toList());
