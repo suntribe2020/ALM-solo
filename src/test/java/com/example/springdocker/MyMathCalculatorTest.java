@@ -40,8 +40,7 @@ class MyMathCalculatorTest {
 
     @Test
     void divideThrowsException() {
-        double input = 1.5;
-        double input2 = 0;
-        assertThrows(NullPointerException.class, () -> myMathCalculator.divide(input, input2));
+        assertThrows(IllegalArgumentException.class, () -> myMathCalculator.divide(1.5, 0));
+        assertThrows(IllegalArgumentException.class, () -> myMathCalculator.divide(0, 1.5));
     }
 }
