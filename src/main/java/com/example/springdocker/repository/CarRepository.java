@@ -1,8 +1,6 @@
 package com.example.springdocker.repository;
 
 import com.example.springdocker.model.Car;
-import com.example.springdocker.model.Food;
-import org.springframework.data.mongodb.core.MongoAdminOperations;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
@@ -15,5 +13,6 @@ import java.util.List;
  * Copyright: MIT
  */
 public interface CarRepository extends MongoRepository<Car, String> {
+
     List<Car> findCarByCanIDriveIt(boolean canDrive);
 }

@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Car {
+
     long id;
     String name;
     boolean canIDriveIt;

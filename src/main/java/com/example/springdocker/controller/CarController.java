@@ -28,8 +28,8 @@ public class CarController {
         return carService.getCars();
     }
 
-    @PostMapping("/cars")
-    public void saveNewFood(@RequestBody Car car) {
+    @PostMapping("/cars/save")
+    public void saveNewCar(@RequestBody Car car) {
         carService.saveNewCar(car);
     }
 
