@@ -9,18 +9,18 @@ package com.example.springdocker;
  */
 public class MyMathCalculator {
 
-    public int add(int a, int b) {
-        return a + b;
+    public int add(int firstNumber, int secondNumber) {
+        return firstNumber + secondNumber;
     }
 
-    public int multiply(int a, int b) {
-        return a * b;
+    public int multiply(int firstNumber, int secondNumber) {
+        return firstNumber * secondNumber;
     }
 
-    public double divide(double a, double b) {
-        if (a == 0 || b == 0) {
-            throw new NullPointerException("Can't divide with 0");
+    public double divide(double numerator, double denominator) {
+        if (numerator == 0 || denominator == 0) {
+            throw new IllegalArgumentException("Can't divide with 0");
         }
-        return a / b;
+        return numerator / denominator;
     }
 }
